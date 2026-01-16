@@ -41,7 +41,9 @@ react-posts-list/
 │   ├── PostModal.tsx
 │   └── SearchBar.tsx
 ├── lib/
-│   └── api.ts
+│   ├── api.ts
+│   ├── filterPosts.ts
+│   └── searchFilter.test.ts
 ├── constants/
 │   └── index.ts
 ├── types/
@@ -61,9 +63,27 @@ react-posts-list/
 The application fetches data from:
 - `https://jsonplaceholder.typicode.com/posts`
 
+## Testing
+
+A simple test for search filtering is included in `lib/searchFilter.test.ts`. It verifies the filtering logic matches the implementation in `components/PostsList.tsx`.
+
+Run the test with:
+```bash
+npm test
+```
+
+The test checks:
+- Empty search returns all posts
+- Case-insensitive matching
+- Partial title matches
+- Non-matching searches return empty results
+- Whitespace-only searches return all posts
+
 ## Future Improvements
 
 - Pagination or infinite scroll
+- Sort posts by ascending/descending order
+- Filter by number of rows to display
 - Add React Query for better data management
-- Unit tests for components and utilities
+- More comprehensive test coverage
 - More accessibility features

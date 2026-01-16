@@ -22,7 +22,7 @@ export default function Header() {
             style={{ objectPosition: "center top" }}
           />
         </div>
-        <h1 className={`${bungeeSpice.className} text-2xl text-gray-800`}>
+        <h1 className={`${bungeeSpice.className} text-2xl text-white`}>
           Kevin Fuentes
         </h1>
       </div>
